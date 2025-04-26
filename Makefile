@@ -100,3 +100,5 @@ copy-resources:
 	) else ( \
 		echo No res/ folder found. Skipping resources copy. \
 	)
+
+all: clean build run ## Clean, build and run the project
