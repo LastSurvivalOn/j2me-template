@@ -1,2 +1,5 @@
 .env
 .vscode
+bin/
+dist/
+manifest.mf
