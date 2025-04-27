@@ -4,7 +4,5 @@ export
 
 .PHONY: help build run clean all
 
-# === Load rules, actions and paths ===
-include mk/paths.mk
-include mk/actions.mk
-include mk/rules.mk
+# === Check OS and load rules for it ===
+include mk/check_os.mk
