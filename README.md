@@ -91,6 +91,25 @@ MANIFEST_FILE_VERSION=1.0
 
 ---
 
+## ✍️ Example
+
+Below is a screenshot of a successful `make run` (or `make all`) execution:
+
+![make run screenshot](img/example.png)
+
+---
+
+## 🧪 Testing Environment
+
+This project has been tested both on an emulator and a real device:
+
+- **Emulator:** Nokia S40 6th Edition SDK Emulator
+- **Real Device:** Nokia 112
+
+The MIDlet successfully launches, displays the intended screen, and operates as expected on the real hardware.
+
+---
+
 ## 🔥 How It Works
 
 1. **Compile:**  
@@ -110,7 +129,7 @@ MANIFEST_FILE_VERSION=1.0
 
 ---
 
-## 📄 Example
+## 📄 Code Example
 
 Simple MIDlet example (`Main.java`):
 
