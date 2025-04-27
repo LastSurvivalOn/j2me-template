@@ -8,6 +8,7 @@ help:
 	@echo make build   - compile and package JAR + JAD
 	@echo make clean   - remove bin/ and dist/
 	@echo make run     - launch emulator with built MIDlet
+	@echo make all     - clean, build and run
 
 # === Main Build Target ===
 build: $(DIST)/$(JAR_NAME) $(DIST)/$(JAD_NAME)
