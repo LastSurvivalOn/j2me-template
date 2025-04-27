@@ -1,15 +1,15 @@
-SRC = $(SRC_DIR)
-BIN = $(BIN_DIR)
-DIST = $(DIST_DIR)
-LIB = $(SDK)/lib
-RES = $(RES_DIR)
+SRC = 0
+BIN = 0
+DIST = 0
+LIB = 0
+RES = 0
 
-JAVAC = "$(JDK)/bin/javac.exe"
-JAR = "$(JDK)/bin/jar.exe"
-MANIFEST = $(MANIFEST_FILE)
-MANIFEST_VERSION = $(MANIFEST_FILE_VERSION)
+JAVAC = 0 
+JAR = 0
+MANIFEST = 0 
+MANIFEST_VERSION = 0 
 
-JAVA_FILES = $(wildcard $(SRC)/*.java)
+JAVA_FILES = 0
 
-JAR_NAME = $(APP_FILE_NAME).jar
-JAD_NAME = $(APP_FILE_NAME).jad
+JAR_NAME = 0
+JAD_NAME = 0
