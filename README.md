@@ -12,17 +12,20 @@
 
 ```bash
 repo/
-├── src/
-│   └── Main.java
+├── img/
+│   └── example.png
 ├── mk/
 │   ├── actions.mk
 │   ├── paths.mk
 │   └── rules.mk
-├── icon.png
+├── src/
+│   └── Main.java
 ├── .env.sample
 ├── .gitignore
+├── LICENSE
 ├── Makefile
-└── README.md
+├── README.md
+└── icon.png
 ```
 
 ---
