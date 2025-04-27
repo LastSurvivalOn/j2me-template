@@ -31,6 +31,7 @@ repo/
 
 | Tool | Version | Purpose | Local file name |
 |:-----|:--------|:--------|:----------|
+| [Make](https://gnuwin32.sourceforge.net/packages/make.htm) | 3.81 (Windows) | Automate build commands (`make build`, `make run`, etc.) | (installed manually) |
 | [Zulu JDK 8](https://www.azul.com/core-post-download/?endpoint=zulu&uuid=fb34112f-fa7f-426a-bfec-8753fb05b476) | 1.8 | Compile `.java` | zulu8.86.0.25-ca-jdk8.0.452-win_x64.msi |
 | [Java ME SDK 3.4](https://www.oracle.com/java/technologies/javame-sdk-downloads.html) | 3.4 | CLDC/MIDP libraries | oracle-jmesdk-3-4-rr-win32-bin.msi |
 | [JRE 6](https://www.oracle.com/ua/java/technologies/javase-java-archive-javase6-downloads.html) | 1.6 | Emulator runtime | jre-6u37-windows-i586.exe |
