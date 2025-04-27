@@ -27,5 +27,5 @@ run:
 	cd /d $(NOKIA_SDK)/bin && \
 	emulator.exe -Xdescriptor:"$(abspath $(DIST))/$(JAD_NAME)"
 
-# === Clean, build and run the project ===
+# === Clean, build and run project ===
 all: clean build run

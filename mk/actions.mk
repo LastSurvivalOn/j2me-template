@@ -1,10 +1,8 @@
-# === Compile .java → .class ===
-$(BIN)/%.class: $(SRC)/%.java
+# === Compile all Java files recursively ===
+classes:
 	@if not exist $(BIN) mkdir $(BIN)
-	$(JAVAC) -source 1.3 -target 1.3 -classpath "$(LIB)/cldc_1.1.jar;$(LIB)/midp_2.0.jar" -d $(BIN) $<
-
-# === Main Build Target ===
-classes: $(JAVA_FILES:$(SRC)/%.java=$(BIN)/%.class)
+	@echo Compiling Java files...
+	$(JAVAC) -source 1.3 -target 1.3 -classpath "$(LIB)/cldc_1.1.jar;$(LIB)/midp_2.0.jar" -d $(BIN) $(shell dir /S /B $(SRC)\*.java)
 
 # === Create JAR ===
 $(DIST)/$(JAR_NAME): classes copy-resources manifest
@@ -27,7 +25,7 @@ $(DIST)/$(JAD_NAME): $(DIST)/$(JAR_NAME)
 	 echo MicroEdition-Configuration: $(MIDLET_CONFIG)>> $(DIST)/$(JAD_NAME))
 	@echo JAD created successfully!
 
-# === Generate manifest file from .env values ===
+# === Generate manifest file ===
 manifest:
 	@echo Creating $(MANIFEST)...
 	@echo Manifest-Version: $(MANIFEST_VERSION) > $(MANIFEST)
@@ -38,15 +36,15 @@ manifest:
 	@echo MicroEdition-Profile: $(MIDLET_PROFILE) >> $(MANIFEST)
 	@echo MicroEdition-Configuration: $(MIDLET_CONFIG) >> $(MANIFEST)
 
-# === Copy all files from res_dir and icon to bin_dir ===
+# === Copy icon and res/ folder ===
 copy-resources:
-	@echo Copying icon from project root to $(BIN)/...
+	@echo Copying icon from root to $(BIN)/...
 	@if exist $(MIDLET_ICON) ( \
 		copy /Y $(MIDLET_ICON) $(BIN)\ >nul \
 	) else ( \
 		echo No icon found at $(MIDLET_ICON). Skipping copy. \
 	)
-	@echo Copying resources from $(RES)/ to $(BIN)/...
+	@echo Copying resources from $(RES)/ to $(BIN)/$(RES)/...
 	@if exist $(RES) ( \
 		if not exist $(BIN)\$(RES) mkdir $(BIN)\$(RES) && \
 		xcopy /E /I /Y $(RES)\* $(BIN)\$(RES)\ >nul \
