@@ -35,6 +35,7 @@ manifest:
 	@echo MIDlet-1: $(MIDLET_NAME), $(MIDLET_ICON), $(MIDLET_CLASS) >> $(MANIFEST)
 	@echo MicroEdition-Profile: $(MIDLET_PROFILE) >> $(MANIFEST)
 	@echo MicroEdition-Configuration: $(MIDLET_CONFIG) >> $(MANIFEST)
+	@if not "$(MIDLET_PERMISSIONS)"=="" echo MIDlet-Permissions: $(MIDLET_PERMISSIONS) >> $(MANIFEST)
 
 # === Copy icon and res/ folder ===
 copy-resources:
