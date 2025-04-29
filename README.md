@@ -71,6 +71,7 @@ MIDLET_CLASS=Main
 MIDLET_PROFILE=MIDP-2.1
 MIDLET_CONFIG=CLDC-1.1
 MIDLET_ICON=icon.png
+MIDLET_PERMISSIONS=javax.microedition.io.Connector.file.read, javax.microedition.io.Connector.file.write
 
 SRC_DIR=src
 BIN_DIR=bin
